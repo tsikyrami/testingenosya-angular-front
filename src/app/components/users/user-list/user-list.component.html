@@ -1,0 +1,50 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Test</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">List user</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h4><U>List User:</U></h4>
+            <table class="table table-hover">
+                <thead>
+                    <tr class="table-default">
+                        <th>  </th>
+                        <th> Name </th>
+                        <th> Email </th>
+                        <th> Username </th>
+                        <th> passwordStrength </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-light" *ngFor="let user of users">
+                        <td> <img src="{{user.picture.thumbnail}}" alt="{{ user.login.username }}"> </td>
+                        <td> {{ user.name.title }}  <a routerLink="{{user.login.uuid}}">  {{ user.name.first }} {{ user.name.last }}  </a> </td>
+                        <td> {{ user.email }} </td>
+                        <td> {{ user.login.username }} </td>
+                        <td> {{ user.registered.age }} </td>
+                        <td> {{ user.login.passwordStrength }} </td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</div>

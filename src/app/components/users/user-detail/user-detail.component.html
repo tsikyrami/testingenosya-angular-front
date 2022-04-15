@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Test</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">List user</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="row justify-content-start">
+        <div class="col-5">
+
+            <h3><U>Detail User:</U></h3>
+
+            <div class="card border-primary mb-3" >
+                <div style="text-align:center;" class="card-header"> 
+                    <img style="height:100px;" class="img-fluid rounded-circle border border-dark" src="{{ user.picture.medium}}" alt="{{ user.login.username }}">
+                    <h4 class="card-title">{{ user.name.title }} {{ user.name.first }} {{ user.name.last }}</h4>
+                </div>
+                <div class="card-body">
+                  
+                  <div *ngIf="user">
+                    <div>
+                        <p> <b><u>Location:</u>  </b> {{ user.location.street }} {{ user.location.city }} {{ user.location.state }} {{ user.location.postcode }} </p>
+                    </div>
+                    <div>
+                        <p> <b> <u>email:</u> </b> {{ user.email }} </p>
+                    </div>
+                    <div>
+                        <p> <b><u>Username</u>  </b> {{ user.login.username }} </p>
+                    </div>
+                    <div>
+                        <p> <b><u>Birth:</u>  </b> {{ user.dob.date }} ( {{ user.dob.age }} years old ) </p>
+                    </div>
+                    <div>
+                        <p> <b><u>Inscription:</u>  </b> {{ user.registered.date }} ( {{ user.registered.age }} years old ) </p>
+                    </div>
+                    <div>
+                        <p> <b><u>Phone:</u>  </b> {{ user.phone }} </p>
+                    </div>
+                    <div>
+                        <p> <b><u>Cell:</u>  </b> {{ user.cell }} </p>
+                    </div>
+                    <div>
+                        <p> <b> <u>Nationality</u> </b> {{ user.nat }} </p>
+                    </div>
+                    <div>
+                        <p> <b> <u>passwordStrength</u> </b> {{ user.login.passwordStrength }} </p>
+                    </div>
+
+ 
+                </div>
+                </div>
+              </div>
+
+        
+             
+        </div>
+    </div>
+</div>
+
